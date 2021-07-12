@@ -1,0 +1,51 @@
+.details__container {
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  padding: 50px;
+  width: 80%;
+  display: flex;
+}
+
+.details .details__left {
+  padding-right: 20px;
+}
+
+.details .detail_title {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.details .detail_year {
+  font-size: 25px;
+  color: #abc3dc;
+  font-weight: 300;
+  margin: 8px 0;
+  align-items: center;
+}
+
+.details .detail__genres {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0px;
+  color: #8e8e8e;
+  text-transform: uppercase;
+}
+
+.detail__genres li {
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+.details .detail__summary {
+  color: #ccc;
+}

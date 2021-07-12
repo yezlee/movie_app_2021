@@ -1,26 +1,21 @@
 import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Detail from "./routes/Detail";
+import Navigation from "./components/Navigation";
+import "./App.css";
 
-class App extends React.Component {
-  state = {
-    count: 0,
-  };
-  add = () => {
-    //this.setState({ count: this.state.count + 1 }); // this is working but better not to use this way.
-    // Because I want to get a new state, not the one from setState.
-    this.setState((current) => ({ count: current.count + 1 }));
-  };
-  minus = () => {
-    this.setState((current) => ({ count: current.count - 1 }));
-  };
-
-  render() {
-    return (
-      <div>
-        <h1>The number is :{this.state.count}</h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <HashRouter>
+      <Navigation />
+      {/* if you want to use Link tag in <Navigation />, it needs to be inside of Router/ */}
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/movie/:id" component={Detail} />
+    </HashRouter>
+  );
 }
+
 export default App;
